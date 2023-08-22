@@ -1,0 +1,12 @@
+Vagrant.configure("2") do |config|
+    config.vm.define "WindowsVulnMachine" do |w1|
+        w1.vm.box = "gusztavvargadr/windows-10"
+        w1.vm.box_version = "2202.0.2302"
+        w1.vm.hostname = "vulnWindows"
+        w1.vm.provider "virtualbox" do |vb|
+            vb.name = "vulnWindows"
+            vb.gui = true
+            vb.memory = "8192"
+        end
+    end
+end
